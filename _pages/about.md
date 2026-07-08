@@ -227,7 +227,7 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
     <div style="flex: 1;">
         <p style="margin: 0 0 8px 0;"><strong>University of Electronic Science and Technology of China</strong></p>
         <ul style="margin: 0; padding-left: 20px;">
-            <li>B.Eng. in Communication Engineering, Sept. 2022 - Jun. 2026 (expected)</li>
+            <li>B.Eng. in Communication Engineering, Sept. 2022 - Jun. 2026</li>
             <li>Supervisor: <a href="https://faculty.uestc.edu.cn/meiweidong/zh_CN/index.htm">Prof. Weidong Mei</a></li>
         </ul>
     </div>
