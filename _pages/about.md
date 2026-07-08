@@ -98,7 +98,7 @@ My current research focuses on **memory-augmented foundation models**. Feel free
 
 <h2 id="research-interests">🔬 Research Interests</h2>
 
-- 🤖 Metis: how to internalize native memory capability to large foundation models?
+- 🤖 Memory foundation models: how to internalize native memory capability to large foundation models?
 
 <!-- <div style="display: flex; align-items: left;">
 	<img src="../images/Metis_arct.png" alt="UESTC_banner" style="width: 70%;">
