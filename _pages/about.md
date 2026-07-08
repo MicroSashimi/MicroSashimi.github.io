@@ -100,9 +100,9 @@ My current research focuses on **memory-augmented foundation models**. Feel free
 
 - 🤖 Metis: how to internalize native memory capability to large foundation models?
 
-<div style="display: flex; align-items: left;">
+<!-- <div style="display: flex; align-items: left;">
 	<img src="../images/Metis_arct.png" alt="UESTC_banner" style="width: 70%;">
-</div>
+</div> -->
 
 - 📹 Image processing and video streaming: e.g., efficient and lossless video compression
 
