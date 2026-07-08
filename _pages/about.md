@@ -89,28 +89,20 @@ function refreshPage() {
 
 Hi! Thanks for visiting my homepage!  
 
-I am Yushen Wang, a final-year undergraduate student majoring in *Communication Engineering* at **University of Electronic Science and Technology of China (UESTC)** under the supervision of [Prof. Weidong Mei](https://faculty.uestc.edu.cn/meiweidong/zh_CN/index.htm) from **National Key Laboratory of Wireless Communications, UESTC**. I am interested in broad areas related to wireless communications, AI and their interdisciplinary applications, e.g., Integrated Sensing and Communications (ISAC), AI-empowered wireless communications, LLMs, multimodal learning, etc., and have been constantly learning about these topics.   
+I am Yushen Wang, a final-year undergraduate student majoring in *Communication Engineering* at **University of Electronic Science and Technology of China (UESTC)** under the supervision of [Prof. Weidong Mei](https://faculty.uestc.edu.cn/meiweidong/zh_CN/index.htm) from **National Key Laboratory of Wireless Communications, UESTC**. I am interested in broad areas related to wireless communications, AI and their interdisciplinary applications, and have been constantly learning about these topics.   
 
-My current research focuses on **wireless sensing**. Feel free to contact me if necessary!   
+My current research focuses on **memory-augmented foundation models**. Feel free to contact me if necessary!   
 
 <b><a href="/files/CV_YushenWang.pdf" ><font color="#000000">Download Full CV</font></a></b>
 
 
 <h2 id="research-interests">🔬 Research Interests</h2>
 
-- 🛰️ ISAC: how to achieve mutual performance gains?
+- 🤖 Metis: how to internalize native memory capability to large foundation models?
 
 <div style="display: flex; align-items: left;">
-	<img src="../images/ISAC_scenario.png" alt="UESTC_banner" style="width: 70%;">
+	<img src="../images/Metis_arct.png" alt="UESTC_banner" style="width: 70%;">
 </div>
-
-- 📡 AI-empowered wireless communications: e.g., intelligent resource allocation
-
-<div style="display: flex; align-items: left;">
-	<img src="../images/AI_wireless.png" alt="UESTC_banner" style="width: 70%;">
-</div>
-
-- 🤖 Large Language Models: e.g., how to enhance their generalizability and robustness?
 
 - 📹 Image processing and video streaming: e.g., efficient and lossless video compression
 
