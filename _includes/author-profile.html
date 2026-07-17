@@ -32,10 +32,14 @@
         <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
       {% endif %}
       {% if author.googlescholar %}
+        {% assign scholar_stats_url = "https://raw.githubusercontent.com/" | append: site.repository | append: "/main/results/gs_data_shieldsio.json" %}
         <li class="author__desktop">
           <i class="fas fa-fw fa-quote-right icon-pad-right" aria-hidden="true"></i>
-          <a href="{{ author.googlescholar }}">
-            <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fscliubit%2Fscliubit.github.io%2Fgoogle-scholar-stats%2Fgs_data_shieldsio.json&query=message&style=flat&logo=Google%20Scholar&label=cite&labelColor=f6f6f6&color=9cf" width="70px">
+          <a href="{{ author.googlescholar }}" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.shields.io/endpoint?url={{ scholar_stats_url | url_encode }}"
+              alt="Google Scholar citation count"
+              height="20">
           </a>
         </li>
       {% endif %}
