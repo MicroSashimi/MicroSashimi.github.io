@@ -4,14 +4,19 @@ name: Update Google Scholar citations
 on:
   workflow_dispatch:
   schedule:
-    # Runs once per day at 03:17 UTC.
+    # Run once per day at 03:17 UTC.
     - cron: "17 3 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/google_citation.yml"
+      - "google_scholar_crawler/**"
+      - "_config.yml"
 
-# Required so the workflow can commit the generated JSON files.
 permissions:
   contents: write
 
-# Prevent overlapping manual/scheduled runs.
 concurrency:
   group: google-scholar-citations
   cancel-in-progress: true
@@ -24,6 +29,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -33,31 +40,66 @@ jobs:
           cache-dependency-path: google_scholar_crawler/requirements.txt
 
       - name: Install dependencies
-        run: python -m pip install --disable-pip-version-check -r google_scholar_crawler/requirements.txt
+        run: >-
+          python -m pip install --disable-pip-version-check
+          -r google_scholar_crawler/requirements.txt
 
       - name: Get citation data
-        timeout-minutes: 2
+        timeout-minutes: 3
         env:
           SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
           GOOGLE_SCHOLAR_ID: FZvs20wAAAAJ
           PYTHONUNBUFFERED: "1"
-        run: python -u google_scholar_crawler/main.py
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${SERP_API_KEY:-}" ]]; then
+            echo "::error title=Missing secret::Create a repository secret named SERP_API_KEY."
+            exit 1
+          fi
+
+          # GNU timeout is a second safety net for DNS/library-level hangs that
+          # may not be interrupted by requests' own connect/read timeouts.
+          set +e
+          timeout --signal=TERM --kill-after=10s 120s \
+            python -u google_scholar_crawler/main.py
+          status=$?
+          set -e
+
+          if [[ "$status" -eq 124 || "$status" -eq 137 ]]; then
+            echo "::error title=Crawler timed out::The citation crawler exceeded 120 seconds and was terminated."
+          fi
+          exit "$status"
+
+      - name: Verify generated files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s results/gs_data.json
+          test -s results/gs_data_shieldsio.json
+          python -m json.tool results/gs_data.json >/dev/null
+          python -m json.tool results/gs_data_shieldsio.json >/dev/null
+          echo "Generated files:"
+          ls -lh results/gs_data*.json
+          echo "Badge payload:"
+          cat results/gs_data_shieldsio.json
 
       - name: Commit updated citation files
         shell: bash
         run: |
           set -euo pipefail
 
-          git add \
-            google_scholar_crawler/results/gs_data.json \
-            google_scholar_crawler/results/gs_data_shieldsio.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add results/gs_data.json results/gs_data_shieldsio.json
 
           if git diff --cached --quiet; then
-            echo "Citation files did not change; nothing to commit."
+            echo "Citation data did not change; nothing to commit."
             exit 0
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: update Google Scholar citations"
-          git push
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
