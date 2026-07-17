@@ -1,10 +1,9 @@
-
 name: Update Google Scholar citations
 
 on:
   workflow_dispatch:
   schedule:
-    # Run once per day at 03:17 UTC.
+    # Run once per day at 03:17 UTC. Low frequency reduces Scholar blocking.
     - cron: "17 3 * * *"
   push:
     branches:
@@ -28,7 +27,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -44,23 +43,17 @@ jobs:
           python -m pip install --disable-pip-version-check
           -r google_scholar_crawler/requirements.txt
 
-      - name: Get citation data
+      - name: Get Google Scholar citation data
         timeout-minutes: 3
         env:
-          SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
           GOOGLE_SCHOLAR_ID: FZvs20wAAAAJ
           PYTHONUNBUFFERED: "1"
         shell: bash
         run: |
           set -euo pipefail
 
-          if [[ -z "${SERP_API_KEY:-}" ]]; then
-            echo "::error title=Missing secret::Create a repository secret named SERP_API_KEY."
-            exit 1
-          fi
-
-          # GNU timeout is a second safety net for DNS/library-level hangs that
-          # may not be interrupted by requests' own connect/read timeouts.
+          # Process-level timeout is a second guard beyond requests' own
+          # connect/read timeouts. No API key or GitHub Secret is required.
           set +e
           timeout --signal=TERM --kill-after=10s 120s \
             python -u google_scholar_crawler/main.py
@@ -68,7 +61,7 @@ jobs:
           set -e
 
           if [[ "$status" -eq 124 || "$status" -eq 137 ]]; then
-            echo "::error title=Crawler timed out::The citation crawler exceeded 120 seconds and was terminated."
+            echo "::error title=Crawler timed out::The crawler exceeded 120 seconds and was terminated. Existing citation data was preserved."
           fi
           exit "$status"
 
