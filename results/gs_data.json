@@ -1,0 +1,20 @@
+{
+  "source": "Google Scholar public profile",
+  "profile_url": "https://scholar.google.com/citations?user=FZvs20wAAAAJ&hl=en",
+  "author": {
+    "name": "Yushen Wang",
+    "scholar_id": "FZvs20wAAAAJ"
+  },
+  "citations": {
+    "all": 26,
+    "recent": 26
+  },
+  "h_index": {
+    "all": 2,
+    "recent": 2
+  },
+  "i10_index": {
+    "all": 1,
+    "recent": 1
+  }
+}
