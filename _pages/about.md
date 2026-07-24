@@ -104,7 +104,7 @@ My current research focuses on **memory-augmented LLMs**. Feel free to contact m
 	<img src="../images/Metis_arct.png" alt="UESTC_banner" style="width: 70%;">
 </div> -->
 
-<!-- - 📹 Image processing and video streaming: e.g., efficient and lossless video compression -->
+- 📹 Image processing and video streaming: e.g., efficient and lossless video compression
 
 
 <h2 id="publications">📚 Publications</h2>
