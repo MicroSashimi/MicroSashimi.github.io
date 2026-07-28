@@ -66,6 +66,67 @@ redirect_from:
       visibility: visible;
       opacity: 1;
     }
+
+    /* Reusable layout for Education and Internship entries */
+    .experience-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    /* Every logo uses the same display box, regardless of source dimensions */
+    .experience-logo {
+      width: 170px;
+      height: 90px;
+      flex: 0 0 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .experience-logo img {
+      width: 140px;
+      height: 80px;
+      object-fit: contain;
+      display: block;
+      margin: 0;
+      max-width: none;
+      max-height: none;
+    }
+
+    .experience-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .experience-details > p {
+      margin: 0 0 8px 0;
+    }
+
+    .experience-details > ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    /* Keep the layout readable on narrow screens */
+    @media (max-width: 600px) {
+      .experience-item {
+        gap: 14px;
+      }
+
+      .experience-logo {
+        width: 110px;
+        height: 72px;
+        flex-basis: 110px;
+      }
+
+      .experience-logo img {
+        width: 100px;
+        height: 62px;
+      }
+    }
 </style>
 
 <script>
@@ -221,28 +282,44 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
 - **Peer Reviewer**, IEEE ICC Workshop'25, Montreal, Canada.
 
 
+<h2 id="internship">💼 Internship</h2>
+
+<div class="experience-item">
+    <div class="experience-logo">
+        <img src="/images/fig.png" alt="Internship company logo">
+    </div>
+    <div class="experience-details">
+        <p><strong>Company Name</strong></p>
+        <ul>
+            <li>LLM Algorithm Intern, Start Date - End Date</li>
+            <li>Research focus: add a brief description of your internship work here.</li>
+        </ul>
+    </div>
+</div>
+
+
 <h2 id="education">🎓 Education</h2>
 
-<div style="display: flex; align-items: flex-start; margin-bottom: 28px;">
-    <div style="width: 170px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-        <img src="../images/UESTC.png" alt="UESTC_banner" style="max-width: 140px; max-height: 80px;">
+<div class="experience-item">
+    <div class="experience-logo">
+        <img src="/images/UESTC.png" alt="University of Electronic Science and Technology of China logo">
     </div>
-    <div style="flex: 1;">
-        <p style="margin: 0 0 8px 0;"><strong>University of Electronic Science and Technology of China</strong></p>
-        <ul style="margin: 0; padding-left: 20px;">
+    <div class="experience-details">
+        <p><strong>University of Electronic Science and Technology of China</strong></p>
+        <ul>
             <li>B.Eng. in Communication Engineering, Sept. 2022 - Jun. 2026</li>
             <li>Supervisor: <a href="https://faculty.uestc.edu.cn/meiweidong/zh_CN/index.htm">Prof. Weidong Mei</a></li>
         </ul>
     </div>
 </div>
 
-<div style="display: flex; align-items: flex-start; margin-top: 12px;">
-    <div style="width: 170px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-        <img src="../images/SJTU.png" alt="UESTC_banner" style="max-width: 155px; max-height: 85px;">
+<div class="experience-item">
+    <div class="experience-logo">
+        <img src="/images/SJTU.png" alt="Shanghai Jiao Tong University logo">
     </div>
-    <div style="flex: 1;">
-        <p style="margin: 0 0 8px 0;"><strong>Shanghai Jiao Tong University</strong></p>
-        <ul style="margin: 0; padding-left: 20px;">
+    <div class="experience-details">
+        <p><strong>Shanghai Jiao Tong University</strong></p>
+        <ul>
             <li>M.Eng. in Information and Communication Engineering, Sept. 2026 - Jun. 2029 (expected)</li>
         </ul>
     </div>
