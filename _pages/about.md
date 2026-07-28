@@ -98,32 +98,16 @@ My current research focuses on **memory-augmented LLMs**. Feel free to contact m
 
 <h2 id="research-interests">🔬 Research Interests</h2>
 
+- 🤖 **Memory foundation models**: how to internalize native memory capability to foundation models?
 
-<h3>🤖 Memory Foundation Models</h3>
-
-<p>
-How to internalize native memory capability into foundation models?
-</p>
-
-<div style="display: flex; align-items: flex-start;">
-    <img src="../images/Metis_framework.png" 
-         alt="Metis framework" 
-         style="width: 70%;">
+<div style="display: flex; align-items: left;">
+	<img src="../images/Metis_framework.png" alt="UESTC_banner" style="width: 70%;">
 </div>
 
+- 🧠 **LLM reasoning**: how to facilitate logical reasoning of LLMs?
 
-<h3>🧠 LLM Reasoning</h3>
+- 📹 **Image processing and video streaming**: e.g., efficient and lossless video compression
 
-<p>
-How to facilitate logical reasoning of LLMs?
-</p>
-
-
-<h3>📹 Image Processing and Video Streaming</h3>
-
-<p>
-Efficient and lossless video compression.
-</p>
 
 
 <h2 id="publications">📚 Publications</h2>
