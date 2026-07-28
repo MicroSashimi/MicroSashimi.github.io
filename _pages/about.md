@@ -291,7 +291,7 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
     <div class="experience-details">
         <p><strong>MemTensor</strong></p>
         <ul>
-            <li>LLM Algorithm Intern</li>
+            <li>LLM Algorithm Intern, Jun. 2026 - Present</li>
             <li>Research focus: memory foundation models</li>
         </ul>
     </div>
