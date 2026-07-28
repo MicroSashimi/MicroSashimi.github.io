@@ -286,13 +286,13 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
 
 <div class="experience-item">
     <div class="experience-logo">
-        <img src="/images/memtensor_logo.png" alt="Internship company logo">
+        <img src="/images/memtensor_logo.jpeg" alt="Internship company logo">
     </div>
     <div class="experience-details">
-        <p><strong>Company Name</strong></p>
+        <p><strong>MemTensor</strong></p>
         <ul>
-            <li>LLM Algorithm Intern, Start Date - End Date</li>
-            <li>Research focus: add a brief description of your internship work here.</li>
+            <li>LLM Algorithm Intern</li>
+            <li>Research focus: memory foundation models</li>
         </ul>
     </div>
 </div>
