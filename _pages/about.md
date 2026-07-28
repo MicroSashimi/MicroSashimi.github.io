@@ -286,7 +286,7 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
 
 <div class="experience-item">
     <div class="experience-logo">
-        <img src="/images/fig.png" alt="Internship company logo">
+        <img src="/images/memtensor_logo.png" alt="Internship company logo">
     </div>
     <div class="experience-details">
         <p><strong>Company Name</strong></p>
