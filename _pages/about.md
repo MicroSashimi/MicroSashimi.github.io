@@ -89,7 +89,7 @@ function refreshPage() {
 
 Hi! Thanks for visiting my homepage!  
 
-I am Yushen Wang, a final-year undergraduate student majoring in *Communication Engineering* at **University of Electronic Science and Technology of China (UESTC)**. I was previously supervised by [Prof. Weidong Mei](https://faculty.uestc.edu.cn/meiweidong/zh_CN/index.htm). I am interested in broad areas related to wireless communications, AI and their interdisciplinary applications, and have been constantly learning about these topics.   
+I am Yushen Wang, an incoming Master student at [**Shanghai Jiao Tong University**](https://www.sjtu.edu.cn/). I received my Bachelor of Engineering (B.Eng.) degree in *Communication Engineering* at [**University of Electronic Science and Technology of China (UESTC)**](https://www.uestc.edu.cn/) in June 2026. I am interested in broad research areas related to LLMs and have been constantly exploring emerging topics.
 
 My current research focuses on **memory-augmented LLMs**. Feel free to contact me if necessary!   
 
