@@ -288,7 +288,7 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
 
 <div class="experience-item">
     <div class="experience-logo">
-        <img src="/images/memtensor_logo.jpeg" alt="Internship company logo">
+        <img src="/images/memtensor_logo.jpg" alt="Internship company logo">
     </div>
     <div class="experience-details">
         <p><strong>MemTensor</strong></p>
