@@ -302,7 +302,8 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
 
 <div class="experience-item">
     <div class="experience-logo">
-        <img src="/images/UESTC.png" alt="University of Electronic Science and Technology of China logo">
+        <img src="/images/UESTC.png"
+             alt="University of Electronic Science and Technology of China logo">
     </div>
     <div class="experience-details">
         <p><strong>University of Electronic Science and Technology of China</strong></p>
@@ -315,7 +316,9 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
 
 <div class="experience-item">
     <div class="experience-logo">
-        <img src="/images/SJTU.png" alt="Shanghai Jiao Tong University logo">
+        <img src="/images/SJTU.png"
+             class="logo-sjtu"
+             alt="Shanghai Jiao Tong University logo">
     </div>
     <div class="experience-details">
         <p><strong>Shanghai Jiao Tong University</strong></p>
@@ -324,4 +327,3 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
         </ul>
     </div>
 </div>
-
