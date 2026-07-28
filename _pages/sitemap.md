@@ -45,7 +45,7 @@ author_profile: true
     <strong>Venue:</strong> <i>{{ post.venue }}</i>
   {% endif %}
   {% if post.date %}
-    <br><strong>Date:</strong> {{ post.date }}
+    <br><strong>Date:</strong> {{ post.date | date: "%Y-%m-%d" }}
   {% endif %}
   {% if post.location %}
     <br><strong>Location:</strong> {{ post.location }}
