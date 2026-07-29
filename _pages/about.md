@@ -163,9 +163,9 @@ Feel free to contact me if necessary!
 
 - 🤖 **Memory foundation models**: how to internalize native memory capability to foundation models?
 
-<div style="display: flex; align-items: left;">
+<!-- <div style="display: flex; align-items: left;">
 	<img src="../images/Metis_framework.png" alt="UESTC_banner" style="width: 70%;">
-</div>
+</div> -->
 
 - 🧠 **LLM reasoning**: how to facilitate logical reasoning of LLMs?
 
