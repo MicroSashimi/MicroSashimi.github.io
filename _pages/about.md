@@ -325,7 +325,7 @@ Only list selected publications. <a href="/publications/">[Click here to see mor
     <div class="experience-details">
         <p><strong>Shanghai Jiao Tong University</strong></p>
         <ul>
-            <li>M.Eng. in Information and Communication Engineering, Sept. 2026 - Jun. 2029 (expected)</li>
+            <li>M.Eng. in Information and Communication Engineering, Sept. 2026 - Mar. 2029 (expected)</li>
         </ul>
     </div>
 </div>
