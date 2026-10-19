@@ -2,7 +2,7 @@
 authors: "Y. Wang, W. Mei, X. Wei, B. Ning and Z. Chen"
 title: "Movable Antenna Empowered Near-Field Sensing via Antenna Position Optimization"
 type: "Journal"
-venue: "submitted to IEEE Trans. Wireless Commun."
+venue: "in IEEE Trans. Wireless Commun."
 # vol: "15"
 # issue: "9807"
 # pp: "1-13"
