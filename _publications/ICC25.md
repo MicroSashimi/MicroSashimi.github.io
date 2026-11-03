@@ -9,7 +9,7 @@ category: conferences
 # permalink: /publication/2009-10-01-paper-title-number-1
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: "Jun. 2025"
-paperurl: 'https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11162470'
+paperurl: 'https://ieeexplore.ieee.org/abstract/document/11162470'
 # DOI: '10.1109/ICCC57788.2023.10233424'
 arxiv: 'https://arxiv.org/pdf/2502.03169'
 # slidesurl: 'https://github.com/scliubit/DPSS-Slides-Codes'
