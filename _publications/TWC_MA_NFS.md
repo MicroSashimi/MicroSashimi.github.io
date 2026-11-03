@@ -15,7 +15,7 @@ date: "Oct. 2026"
 arxiv: 'https://arxiv.org/pdf/2512.00758'
 # codes: 'https://github.com/bianlab/Scatterencryption'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-# paperurl: 'https://www.nature.com/articles/s41467-024-54168-3'
+paperurl: 'https://ieeexplore.ieee.org/abstract/document/11755624'
 # DOI: '10.1038/s41467-024-54168-3'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
